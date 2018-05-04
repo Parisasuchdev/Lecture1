@@ -1,12 +1,16 @@
 <!DOCTYPE>
 <html>
 <script>
-var text = prompt("Enter any word:");
-var arr=[];
 
+var text = prompt("Enter any sentence:");
+function ReverseWord(word){
+var arr=[];
 for(var i=text.length-1; i>=0; i--){
 arr.push(text.charAt(i));
 }
-document.write(arr);
+return arr;
+}
+
+document.write(ReverseWord(text));
 </script>
 </html>
