@@ -1,0 +1,70 @@
+import React from 'react';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+
+export default class extends React.Component{
+
+  handleClick() {
+    //Custom Function
+    alert("Button Clicked");
+  }
+
+  render() {
+    //This is the default method for drawing on Mobile Screen
+    return(
+      <View style={Styles.container}>
+      <View style ={Styles.box}>
+        <TextInput
+        style={Styles.input}
+        />
+        
+        <TextInput
+        secureTextEntry={true}
+        style={Styles.input}
+        />
+        
+        <TouchableOpacity
+          style={Styles.button}
+          onPress={this.handleClick}
+        >
+          <Text style={Styles.textButton}> Login </Text>
+        </TouchableOpacity>
+        </View>
+      </View>
+    )
+  }
+}
+
+const Styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
+  },
+  box:{
+    height: 150,
+		width: 300,
+		margin: 20,
+    borderColor: "black",
+    margin: 100,
+    paddingLeft: 90,
+    paddingTop: 20,
+    elevation: 10, 
+  
+  },
+  textButton: {
+    fontSize: 15,
+    textAlign: 'center',
+    color: '#ffffff',
+  
+  },
+  button: {
+    width: 120,
+    backgroundColor: 'black'
+
+  },
+  input:{
+    height: 40, borderColor: 'gray',  textAlign:'center', width:120
+   
+  }
+})
